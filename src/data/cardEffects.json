@@ -22,7 +22,7 @@
     "4206964": {"name":"Trap Hole","timing":"summon","kind":"trapHole","source":"set","zone":"backrow"},
     "40640057": {"name":"Kuriboh","timing":"attack","kind":"kuriboh","source":"hand","zone":"hand"},
     "54652250": {"name":"Man-Eater Bug","timing":"flip","kind":"configured","source":"monster","zone":"field","operation":{"type":"destroy","targetSide":"opponent","targeting":"one-monster"}},
-    "93920745": {"name":"Penguin Soldier","timing":"flip","kind":"configured","source":"monster","zone":"field","operation":{"type":"returnToHand","targetSide":"opponent","targeting":"up-to-two-monsters"}},
+    "93920745": {"name":"Penguin Soldier","timing":"flip","kind":"configured","source":"monster","zone":"field","operation":{"type":"returnToHand","targetSide":"all","targeting":"up-to-two-monsters"}},
     "83764718": {"name":"Monster Reborn","timing":"main","kind":"configured","zone":"hand","operation":{"type":"specialSummon","sourceZone":"graveyard","destination":"monster-zone","properlySummoned":true}},
     "94192409": {"name":"Compulsory Evacuation Device","timing":"attack","kind":"configured","source":"set","zone":"backrow","operation":{"type":"returnToHand","targetSide":"attacking-monster","targeting":"one-monster"}},
     "19613556": {"name":"Heavy Storm","timing":"main","kind":"configured","zone":"hand","operation":{"type":"destroy","targetSide":"all","targeting":"all-backrow"}},
@@ -37,3 +37,4 @@
     {"cardId":"77414722","name":"Magic Jammer","trigger":"chain-to-spell","operation":{"type":"negate","activationType":"spell","discardCost":1}}
   ]
 }
+
