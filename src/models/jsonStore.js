@@ -32,7 +32,8 @@ async function request(pathname, options = {}) {
     error.code = 'SUPABASE_ERROR';
     throw error;
   }
-  return response.status === 204 ? null : response.json();
+  const body = await response.text();
+  return body ? JSON.parse(body) : null;
 }
 
 async function read(name, fallback = []) {
