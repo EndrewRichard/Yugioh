@@ -2,9 +2,9 @@ const fs = require('node:fs/promises');
 const path = require('node:path');
 
 const url = process.env.SUPABASE_URL?.replace(/\/$/, '');
-const key = process.env.SUPABASE_SERVICE_ROLE_KEY;
+const key = process.env.SUPABASE_SECRET_KEY;
 if (!url || !key) {
-  console.error('Defina SUPABASE_URL e SUPABASE_SERVICE_ROLE_KEY antes de migrar.');
+  console.error('Defina SUPABASE_URL e SUPABASE_SECRET_KEY antes de migrar.');
   process.exit(1);
 }
 
@@ -22,7 +22,6 @@ async function main() {
       method: 'POST',
       headers: {
         apikey: key,
-        Authorization: `Bearer ${key}`,
         'Content-Type': 'application/json',
         Prefer: 'resolution=merge-duplicates,return=minimal'
       },

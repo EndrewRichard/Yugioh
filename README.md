@@ -23,7 +23,7 @@ Localmente, o projeto usa arquivos JSON e não precisa de serviços externos. De
 
 ## Armazenamento dos dados
 
-Sem variáveis Supabase, os dados ficam em `data/*.json`. Em hospedagem, configure `SUPABASE_URL` e `SUPABASE_SERVICE_ROLE_KEY` para usar a tabela `public.app_state` no Supabase. A aplicação mantém a camada de modelos existente e salva as coleções de usuários, decks, duelos e cartas como JSONB.
+Sem variáveis Supabase, os dados ficam em `data/*.json`. Em hospedagem, configure `SUPABASE_URL` e `SUPABASE_SECRET_KEY` para usar a tabela `public.app_state` no Supabase. A aplicação mantém a camada de modelos existente e salva as coleções de usuários, decks, duelos e cartas como JSONB.
 
 Os produtos e códigos oficiais disponíveis ficam em `src/data/characterDecks.json`. Ao importar, o servidor busca os dados do produto na API YGOPRODeck e cria uma cópia privada na conta. O editor mantém o Deck Principal e o Deck Extra de Fusões em listas separadas. Alguns personagens do anime, como Mai, não têm um deck completo de produto oficial compatível com esse catálogo; por isso o site não apresenta listas inventadas como oficiais.
 
@@ -32,8 +32,8 @@ Os decks continuam vinculados à conta autenticada; cada cópia tem seu próprio
 ## Publicar no Render com Supabase
 
 1. Crie um projeto Supabase e rode `supabase/schema.sql` no SQL Editor.
-2. Envie o repositório ao GitHub e crie um Blueprint no Render apontando para ele. O `render.yaml` configura o serviço Node e solicita as variáveis secretas `SUPABASE_URL` e `SUPABASE_SERVICE_ROLE_KEY`.
-3. No Supabase, copie a URL do projeto e a chave secreta de servidor. Cadastre ambas no Render. Nunca exponha a chave em `public/` ou no Git.
+2. Envie o repositório ao GitHub e crie um Blueprint no Render apontando para ele. O `render.yaml` configura o serviço Node e solicita as variáveis secretas `SUPABASE_URL` e `SUPABASE_SECRET_KEY`.
+3. No Supabase, copie a URL do projeto e uma chave secreta (`sb_secret_...`). Cadastre ambas no Render. Nunca exponha a chave em `public/` ou no Git.
 4. Para copiar dados locais existentes, configure as duas variáveis no terminal e execute `npm run migrate:supabase` uma vez. Faça uma cópia da pasta `data/` antes da migração.
 
 O plano gratuito do Render pode desligar a aplicação quando fica sem tráfego. O Supabase Free tem limites de uso e pode pausar projetos inativos; mantenha cópias dos dados importantes e consulte os limites atuais antes de abrir o site para mais pessoas.

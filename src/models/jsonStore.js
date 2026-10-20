@@ -3,10 +3,10 @@ const path = require('node:path');
 
 const dir = path.join(__dirname, '..', '..', 'data');
 const supabaseUrl = process.env.SUPABASE_URL?.replace(/\/$/, '');
-const supabaseKey = process.env.SUPABASE_SERVICE_ROLE_KEY;
+const supabaseKey = process.env.SUPABASE_SECRET_KEY;
 
 if (Boolean(supabaseUrl) !== Boolean(supabaseKey)) {
-  throw new Error('Configure SUPABASE_URL e SUPABASE_SERVICE_ROLE_KEY juntos, ou remova ambos para usar JSON local.');
+  throw new Error('Configure SUPABASE_URL e SUPABASE_SECRET_KEY juntos, ou remova ambos para usar JSON local.');
 }
 
 function filename(name) { return path.join(dir, `${name}.json`); }
@@ -21,7 +21,6 @@ async function request(pathname, options = {}) {
     ...options,
     headers: {
       apikey: supabaseKey,
-      Authorization: `Bearer ${supabaseKey}`,
       'Content-Type': 'application/json',
       ...(options.headers || {})
     },
