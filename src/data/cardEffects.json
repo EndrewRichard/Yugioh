@@ -1,0 +1,39 @@
+{
+  "version": 1,
+  "description": "Registro declarativo de efeitos reconhecidos pelo protótipo. Cada carta deve declarar zona de origem, janela, condição e operação. IDs sem regra ficam sem automação, mesmo quando o texto da carta existe no catálogo.",
+  "families": {
+    "draw": {"status":"implemented","parameters":["amount","target"]},
+    "destroy": {"status":"implemented","parameters":["targetSide","targeting","sendTo"]},
+    "modifyStats": {"status":"implemented","parameters":["stat","amount","targetSide","duration"]},
+    "returnToHand": {"status":"implemented","parameters":["targetSide","targeting"]},
+    "negateSummon": {"status":"implemented","parameters":["lpCostFraction"]},
+    "specialSummon": {"status":"implemented","parameters":["sourceZone","destination","summonType","properlySummoned"]},
+    "flip": {"status":"implemented","parameters":["trigger","operation"]}
+  },
+  "cards": {
+    "55144522": {"name":"Pot of Greed","timing":"main","kind":"draw","amount":2,"zone":"hand"},
+    "53129443": {"name":"Dark Hole","timing":"main","kind":"destroyAll","zone":"hand"},
+    "12580477": {"name":"Raigeki","timing":"main","kind":"destroyOpponent","zone":"hand"},
+    "72302403": {"name":"Swords of Revealing Light","timing":"main","kind":"swords","zone":"hand"},
+    "71625222": {"name":"Time Wizard","timing":"main","kind":"timeWizard","source":"monster","zone":"field"},
+    "44095762": {"name":"Mirror Force","timing":"attack","kind":"mirrorForce","source":"set","zone":"backrow"},
+    "62279055": {"name":"Magic Cylinder","timing":"attack","kind":"magicCylinder","source":"set","zone":"backrow"},
+    "56120475": {"name":"Sakuretsu Armor","timing":"attack","kind":"sakuretsu","source":"set","zone":"backrow"},
+    "4206964": {"name":"Trap Hole","timing":"summon","kind":"trapHole","source":"set","zone":"backrow"},
+    "40640057": {"name":"Kuriboh","timing":"attack","kind":"kuriboh","source":"hand","zone":"hand"},
+    "54652250": {"name":"Man-Eater Bug","timing":"flip","kind":"configured","source":"monster","zone":"field","operation":{"type":"destroy","targetSide":"opponent","targeting":"one-monster"}},
+    "93920745": {"name":"Penguin Soldier","timing":"flip","kind":"configured","source":"monster","zone":"field","operation":{"type":"returnToHand","targetSide":"opponent","targeting":"up-to-two-monsters"}},
+    "83764718": {"name":"Monster Reborn","timing":"main","kind":"configured","zone":"hand","operation":{"type":"specialSummon","sourceZone":"graveyard","destination":"monster-zone","properlySummoned":true}},
+    "94192409": {"name":"Compulsory Evacuation Device","timing":"attack","kind":"configured","source":"set","zone":"backrow","operation":{"type":"returnToHand","targetSide":"attacking-monster","targeting":"one-monster"}},
+    "19613556": {"name":"Heavy Storm","timing":"main","kind":"configured","zone":"hand","operation":{"type":"destroy","targetSide":"all","targeting":"all-backrow"}},
+    "41420027": {"name":"Solemn Judgment","timing":"summon","kind":"configured","source":"set","zone":"backrow","operation":{"type":"negateSummon","lpCostFraction":0.5}}
+  },
+  "plannedExamples": [
+    {"cardId":"54652250","name":"Man-Eater Bug","trigger":"flip","operation":{"type":"destroy","targetSide":"opponent","targeting":"one-monster"}},
+    {"cardId":"93920745","name":"Penguin Soldier","trigger":"flip","operation":{"type":"returnToHand","targetSide":"up-to-two-monsters"}},
+    {"cardId":"83764718","name":"Monster Reborn","trigger":"manual-main","operation":{"type":"specialSummon","sourceZone":"graveyard","destination":"monster-zone","properlySummoned":true}},
+    {"cardId":"94192409","name":"Compulsory Evacuation Device","trigger":"response-window","operation":{"type":"returnToHand","targetSide":"one-monster"}},
+    {"cardId":"55713623","name":"Shrink","trigger":"response-window","operation":{"type":"modifyStats","stat":"atk","amount":"halve","duration":"end-of-turn"}},
+    {"cardId":"77414722","name":"Magic Jammer","trigger":"chain-to-spell","operation":{"type":"negate","activationType":"spell","discardCost":1}}
+  ]
+}

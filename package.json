@@ -1,0 +1,8 @@
+{
+  "name": "duelist-classico",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Protótipo responsivo de duelos e decks clássicos com Node.js, JSON local e Supabase opcional.",
+  "scripts": { "start": "node src/server.js", "dev": "node --watch src/server.js", "migrate:supabase": "node scripts/migrate-json-to-supabase.js" },
+  "engines": { "node": ">=18" }
+}

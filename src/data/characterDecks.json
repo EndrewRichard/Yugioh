@@ -1,0 +1,114 @@
+[
+  {
+    "id": "legendary-yugi",
+    "character": "Yugi Muto",
+    "arc": "Legendary Decks II · 2016",
+    "title": "Yugi — Legendary Decks II",
+    "description": "Lista oficial de 43 cartas do produto da Konami. Cartas de invocação não permitidas neste formato são omitidas.",
+    "icon": "✧",
+    "official": true,
+    "product": "Legendary Decks II",
+    "prefix": "LDK2-ENY",
+    "expectedCount": 43
+  },
+  {
+    "id": "legendary-kaiba",
+    "character": "Seto Kaiba",
+    "arc": "Legendary Decks II · 2016",
+    "title": "Kaiba — Legendary Decks II",
+    "description": "Lista oficial de 43 cartas do produto da Konami. Cartas de invocação não permitidas neste formato são omitidas.",
+    "icon": "🐉",
+    "official": true,
+    "product": "Legendary Decks II",
+    "prefix": "LDK2-ENK",
+    "expectedCount": 43
+  },
+  {
+    "id": "legendary-joey",
+    "character": "Joey Wheeler",
+    "arc": "Legendary Decks II · 2016",
+    "title": "Joey — Legendary Decks II",
+    "description": "Lista oficial de 43 cartas do produto da Konami. Cartas de invocação não permitidas neste formato são omitidas.",
+    "icon": "🐲",
+    "official": true,
+    "product": "Legendary Decks II",
+    "prefix": "LDK2-ENJ",
+    "expectedCount": 43
+  },
+  {
+    "id": "structure-yugi",
+    "character": "Yugi Muto",
+    "arc": "Structure Deck · 2016",
+    "title": "Structure Deck: Yugi Muto",
+    "description": "Lista oficial do Structure Deck da Konami, com Deck Principal e Extra separados.",
+    "icon": "🧲",
+    "official": true,
+    "product": "Structure Deck: Yugi Muto",
+    "prefix": "SDMY-EN",
+    "expectedCount": 45
+  },
+  {
+    "id": "structure-kaiba",
+    "character": "Seto Kaiba",
+    "arc": "Structure Deck · 2016",
+    "title": "Structure Deck: Seto Kaiba",
+    "description": "Lista oficial do Structure Deck da Konami, com Deck Principal e Extra separados.",
+    "icon": "⚙",
+    "official": true,
+    "product": "Structure Deck: Seto Kaiba",
+    "prefix": "SDKS-EN",
+    "expectedCount": 45
+  },
+  {
+    "id": "speed-mai",
+    "character": "Mai Valentine",
+    "arc": "Speed Duel · Duelists of Tomorrow (SS02)",
+    "title": "Mai — Duelists of Tomorrow",
+    "description": "Deck inicial Speed Duel de Mai, baseado na lista do produto oficial. Formato Speed Duel (20 cartas); requer completar para 40 cartas para duelos padrão.",
+    "icon": "🪶",
+    "official": true,
+    "format": "speed-duel",
+    "source": "https://www.yugioh-card.com/en/products/sd_ss01_ss02/",
+    "cardNames": [
+      ["Harpie Lady 1",1],["Harpie Lady 2",1],["Harpie Lady 3",1],["Harpie Lady Sisters",1],
+      ["Amazoness Chain Master",1],["Amazoness Swords Woman",1],["Amazoness Sage",1],["Birdface",2],["Sonic Shooter",1],
+      ["Elegant Egotist",2],["Triangle Ecstasy Spark",1],["Cyber Shield",1],["Harpies' Hunting Ground",1],["Amazoness Heirloom",1],
+      ["Amazoness Archers",1],["Windstorm of Etaqua",1],["Shadow of Eyes",1],["Wild Tornado",1]
+    ]
+  },
+  {
+    "id": "speed-pegasus",
+    "character": "Maximillion Pegasus",
+    "arc": "Speed Duel · Destiny Masters (SS01)",
+    "title": "Pegasus — Destiny Masters",
+    "description": "Deck inicial Speed Duel de Pegasus, baseado na lista do produto oficial. Formato Speed Duel (20 cartas); requer completar para 40 cartas para duelos padrão.",
+    "icon": "🎭",
+    "official": true,
+    "format": "speed-duel",
+    "source": "https://www.yugioh-card.com/en/products/sd_ss01_ss02/",
+    "cardNames": [
+      ["Rogue Doll",1],["Toon Alligator",1],["Parrot Dragon",1],["Dark Rabbit",1],["Toon Masked Sorcerer",2],
+      ["Toon Mermaid",1],["Toon Summoned Skull",1],["Relinquished",1],
+      ["Black Illusion Ritual",1],["Toon Table of Contents",1],["Toon Rollback",1],["Toon World",2],["Yami",1],["Sword of Deep-Seated",1],
+      ["Toon Defense",1],["Jar of Greed",1],["Wild Tornado",1]
+    ]
+  },
+  {
+    "id": "speed-jinzo",
+    "character": "Espa Roba",
+    "arc": "Speed Duel · Streets of Battle City (SBC1)",
+    "title": "Espa Roba — A Ameaça Mecânica (Jinzo)",
+    "description": "Deck Speed Duel de Espa Roba centrado em Jinzo, do produto Streets of Battle City. Formato Speed Duel (22 cartas); requer completar para 40 cartas para duelos padrão.",
+    "icon": "🤖",
+    "official": true,
+    "format": "speed-duel",
+    "source": "https://www.yugioh-card.com/en/products/sbc1/",
+    "cardNames": [
+      ["Jinzo - Returner",1],["Jinzo",1],["Jinzo - Lord",1],["Cyber Raider",1],["The Fiend Megacyber",1],
+      ["Dr. Frankenderp",1],["Spell Canceller",1],["Destructotron",1],["Reflect Bounder",1],["Golgoil",1],
+      ["Cosmos Channelling",1],["Cyber Energy Shock",1],["Amplifier",1],["Creature Swap",1],["Cosmic Cyclone",1],
+      ["Foolish Burial",1],["Gift of the Martyr",1],["Exchange",1],
+      ["Draining Shield",1],["Psychic Shockwave",1],["Mind Crush",1],["Widespread Ruin",1]
+    ]
+  }
+]
