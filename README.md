@@ -1,4 +1,4 @@
-# DUELIST — Arena Clássica
+# Yugioh — Arena Clássica
 
 Protótipo responsivo para catálogo de cartas, gerenciamento de decks por conta e duelos clássicos em desenvolvimento. O formato exclui Sincro, Xyz, Link e Pêndulo; o foco é o jogo antigo, incluindo Rituais e Fusões no catálogo.
 
